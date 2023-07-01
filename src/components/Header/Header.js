@@ -16,21 +16,21 @@ const Header = () => {
         <img src="./logo.png" alt="logo" width={100} />
 
         <OutsideClickHandler
-        onOutsideClick={()=>{
-          setMenuOpened(false);
-        }}
+          onOutsideClick={() => {
+            setMenuOpened(false);
+          }}
         >
-        <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
-          <a href="#">Residencies</a>
-          <a href="#">Our Vlaue</a>
-          <a href="#"> Contact Us</a>
-          <a href="#"> Get Started</a>
-          <button className="button">
-            <a href="mailto:sandabansari972@gmail.com">Contact</a>
-          </button>
-        </div>
+          <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
+            <a href="#">Residencies</a>
+            <a href="#">Our Value</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Get Started</a>
+            <a className="button" href="mailto:sandabansari972@gmail.com">
+              Contact
+            </a>
+          </div>
         </OutsideClickHandler>
-        
+
         <div
           className="menu-icon"
           onClick={() => setMenuOpened((prev) => !prev)}
