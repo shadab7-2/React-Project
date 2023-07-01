@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 import { HiLocationMarker } from "react-icons/hi";
 import CountUp from "react-countup";
-import {motion, spring} from "framer-motion"
+import {motion} from "framer-motion"
 const Hero = () => {
   return (
     <section className="hero-wrapper">
