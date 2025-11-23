@@ -1,74 +1,156 @@
+/* MAIN CONTAINER */
+.r-wrapper {
+  background: var(--black);
+  padding: 4rem 0;
+}
+
 .r-container {
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
+
+/* HEADING */
 .r-head {
   margin-bottom: 2rem;
 }
+
+.r-head .orangeText {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--orange);
+  letter-spacing: 1px;
+}
+
+.r-head .primaryText {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* RESIDENCY CARD */
 .r-card {
-  gap: 0.6rem;
-  padding: 1rem;
-  border-radius: 10px;
+  gap: 0.8rem;
+  padding: 1.2rem;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.4s ease;
   max-width: max-content;
   margin: auto;
-  transition: all 300ms ease-in;
+
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.25);
 }
+
+/* IMAGE */
 .r-card > img {
   width: 100%;
   max-width: 15rem;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
 }
+
+/* PRICE */
 .r-card > :nth-child(2) {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--orange);
 }
+
+/* NAME */
 .r-card > :nth-child(3) {
   font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
 }
+
+/* DESCRIPTION */
 .r-card > :nth-child(4) {
-  font-size: 0.7rem;
-  width: 15rem;
+  font-size: 0.85rem;
+  width: 16rem;
+  color: var(--secondary);
+  line-height: 1.3rem;
 }
+
+/* HOVER EFFECT */
 .r-card:hover {
-  scale: 1.025;
   cursor: pointer;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(136, 160, 255, 0.46) 217.91%
-  );
-  box-shadow: 0px 72px 49px -51px rgba(136, 160, 255, 0.21);
+  transform: translateY(-10px) scale(1.03);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
 }
+
+.r-card:hover img {
+  transform: scale(1.06);
+}
+
+/* SWIPER */
 .swiper-horizontal {
   overflow: visible;
 }
+
+/* SLIDER BUTTONS */
 .r-buttons {
   position: absolute;
+  display: flex;
   gap: 1rem;
   top: -4rem;
   right: 0;
-  z-index: 1;
-}
-.r-buttons button {
-  font-size: 1.2rem;
-  padding: 0.2rem 0.8rem;
-  color: blue;
-  border: none;
-  border-radius: 5px;
-  background-color: white;
-  cursor: pointer;
-}
-.r-buttons>:nth-child(1){
-    background-color: #EEEEFF;
-}
-.r-buttons>:nth-child(2){
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .25);
+  z-index: 10;
 }
 
-@media (max-width:640px){
-  .r-head{
+.r-buttons button {
+  padding: 0.4rem 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.r-buttons button:hover {
+  background: var(--orange-gradient);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* SPECIAL STYLES */
+.r-buttons > :nth-child(1) {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.r-buttons > :nth-child(2) {
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .r-head {
     align-items: center;
   }
-  .r-buttons{
+
+  .r-buttons {
     position: initial;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .r-card {
+    padding: 1rem;
+  }
+
+  .r-card > :nth-child(4) {
+    width: 100%;
   }
 }

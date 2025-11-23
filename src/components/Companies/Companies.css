@@ -1,7 +1,80 @@
-.c-container{
-    justify-content: space-between;
-    gap: 1rem;
+/* MAIN WRAPPER */
+.c-wrapper {
+  padding: 3rem 0 4rem 0;
+  background: var(--black);
+  text-align: center;
 }
-.c-container>img{
-    width: 9rem;
+
+/* HEADING */
+.companies-heading {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.companies-heading::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: var(--orange-gradient);
+  border-radius: 4px;
+  margin: 0.6rem auto 0 auto;
+  display: block;
+}
+
+/* GLASSMORPHISM CONTAINER */
+.c-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* LOGOS */
+.company-logo {
+  width: 9rem;
+  opacity: 0.8;
+  filter: grayscale(100%);
+  transition: all 0.4s ease-in-out;
+
+  padding: 0.5rem;
+  border-radius: 12px;
+  transform: translateY(0);
+}
+
+/* PREMIUM HOVER EFFECT */
+.company-logo:hover {
+  filter: grayscale(0%) brightness(1.3);
+  opacity: 1;
+
+  transform: translateY(-8px) scale(1.15);
+
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .company-logo {
+    width: 7rem;
+  }
+  
+  .c-container {
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+  }
 }

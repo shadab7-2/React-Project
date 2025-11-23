@@ -34,6 +34,7 @@ const Value = () => {
             <img src="./value.png" alt="" />
           </div>
         </div>
+
         {/* right side */}
         <div className="flexColStart v-right">
           <span className="orangeText">Our Value</span>
@@ -67,6 +68,7 @@ const Value = () => {
                     </div>
                   </AccordionItemButton>
                 </AccordionItemHeading>
+
                 <AccordionItemPanel>
                   <p className="secondaryText">{item.detail}</p>
                 </AccordionItemPanel>

@@ -5,17 +5,21 @@ const GetStarted = () => {
   return (
     <section className="g-wrapper">
       <div className="paddings innerWidth g-container">
-        <div className="flexColCenter inner-container">
-          <span className="primaryText">Get Started with Homyz</span>
-          <span className="secondaryText">
-            Subscribe and find super attractive price quotes from us
+
+        <div className="flexColCenter g-inner">
+          <h2 className="g-title">Get Started with Homyz</h2>
+
+          <p className="g-subtitle">
+            Subscribe and get the best price quotes from us.
             <br />
-            Find your residence soon
-          </span>
-          <button className="button">
-             <a href="mailto: sahdabansari972@gamil.com">Get Started</a>
-          </button>
+            Find your dream residence soon.
+          </p>
+
+          <a href="mailto:sahdabansari972@gamil.com" className="g-btn">
+            Get Started
+          </a>
         </div>
+
       </div>
     </section>
   );

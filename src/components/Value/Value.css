@@ -1,11 +1,21 @@
+.v-wrapper{
+    padding: 10px 20px;
+    background-color: black;
+}
+
 .v-container .image-container{
     border: 8px solid rgb(232, 232, 232 / 93%);
+    justify-content: space-around;
 }
 .v-container>div{
     flex: 1;
 }
 .v-right{
     gap: 0.5rem;
+    margin-left: 10px;
+}
+.v-left{
+    margin-left: 200px;
 }
 .accordion{
     margin-top: 2rem;
@@ -29,7 +39,6 @@
     padding: 10px;
     background: #eeeeff;
     border-radius: 5px;
-
 }
 .icon svg{
     fill: var(--blue);
